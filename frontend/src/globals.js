@@ -20,6 +20,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+let proto = 'ws:';
+if (window.location.protocol === 'https:') {
+  proto = 'wss:';
+}
+
 const state = {
   command_history: [],
   history_index: -1,
@@ -29,6 +34,6 @@ const state = {
   current_line: -1,
   breakpoints: []
 },
-  websocket = new WebSocket('ws://' + window.location.host + '/ws');
+ websocket = new WebSocket(`${proto}//${window.location.host}/ws`);
 
 export { websocket, state };
