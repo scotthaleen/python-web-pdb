@@ -45,7 +45,7 @@ def get_doc(filename):
 
 setup(
     name='web-pdb',
-    version=get_version(),
+    version='1.5.7b',
     author='Roman Miroshnychenko',
     author_email='roman1972@gmail.com',
     description='Web interface for Python\'s built-in PDB debugger',
